@@ -1,71 +1,100 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19796384&assignment_repo_type=AssignmentRepo)
-# React.js and Tailwind CSS Assignment
+React Task Management App
 
-This assignment focuses on building a responsive React application using JSX and Tailwind CSS, implementing component architecture, state management, hooks, and API integration.
+This is a modern task management app built with React, Vite, and Tailwind CSS v4. It includes routing, reusable components, local state management, and integration with a public API.
 
-## Assignment Overview
+---
 
-You will:
-1. Set up a React project with Vite and Tailwind CSS
-2. Create reusable UI components
-3. Implement state management using React hooks
-4. Integrate with external APIs
-5. Style your application using Tailwind CSS
+Features
 
-## Getting Started
+Task 1: Project Setup
+- Initialized with Vite for fast development
+- Tailwind CSS v4 integrated using @tailwindcss/vite
+- Project structure organized into:
+  - components/ – reusable UI elements
+  - pages/ – route-level views (Home, Tasks, API)
+  - context/ – global state management
+- Basic routing using react-router-dom
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Install dependencies:
-   ```
-   npm install
-   ```
-4. Start the development server:
-   ```
-   npm run dev
-   ```
+Task 2: Component Architecture
+- Reusable components:
+  - Button with variants: primary, secondary, danger
+  - Card for boxed layouts
+  - Navbar and Footer for layout structure
+- Layout component wraps all pages for consistent structure
+- Components accept props for reusability and customization
 
-## Files Included
+Task 3: State Management and Hooks
+- TaskManager component:
+  - Add, complete, delete, and filter tasks (All, Active, Completed)
+- Uses React hooks:
+  - useState for task data
+  - useEffect for loading tasks
+  - useContext for theme (light/dark) management
+- Custom hook useLocalStorage to persist tasks locally
 
-- `Week3-Assignment.md`: Detailed assignment instructions
-- Starter files for your React application:
-  - Basic project structure
-  - Pre-configured Tailwind CSS
-  - Sample component templates
+Task 4: API Integration
+- Fetches posts from JSONPlaceholder (https://jsonplaceholder.typicode.com/posts)
+- Displays posts in a responsive card layout
+- Includes:
+  - Loading and error states
+  - Search filter
+  - Pagination
 
-## Requirements
+---
 
-- Node.js (v18 or higher)
-- npm or yarn
-- Modern web browser
-- Code editor (VS Code recommended)
+Folder Structure
 
-## Project Structure
+my-react-app/
+├── components/
+│   ├── Button.jsx
+│   ├── Card.jsx
+│   ├── Footer.jsx
+│   ├── Navbar.jsx
+│   └── Layout.jsx
+├── context/
+│   └── ThemeContext.jsx
+├── hooks/
+│   └── useLocalStorage.js
+├── pages/
+│   ├── Home.jsx
+│   ├── Tasks.jsx
+│   └── ApiData.jsx
+├── App.jsx
+├── main.jsx
+├── index.css
+├── tailwind.config.js
+└── vite.config.js
 
-```
-src/
-├── components/       # Reusable UI components
-├── pages/           # Page components
-├── hooks/           # Custom React hooks
-├── context/         # React context providers
-├── api/             # API integration functions
-├── utils/           # Utility functions
-└── App.jsx          # Main application component
-```
+---
 
-## Submission
+Installation
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+Clone the repo
+git clone https://github.com/your-username/task-manager-app.git
 
-1. Complete all required components and features
-2. Implement proper state management with hooks
-3. Integrate with at least one external API
-4. Style your application with Tailwind CSS
-5. Deploy your application and add the URL to your README.md
+Go into the project
+cd my-react-app
 
-## Resources
+Install dependencies
+npm install
 
-- [React Documentation](https://react.dev/)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- [Vite Documentation](https://vitejs.dev/guide/)
-- [React Router Documentation](https://reactrouter.com/) 
+Run the app
+npm run dev
+
+---
+
+Built With
+
+- React
+- Vite
+- Tailwind CSS v4 (via @tailwindcss/vite)
+- React Router
+- JSONPlaceholder API
+
+---
+
+
+
+
+
+
